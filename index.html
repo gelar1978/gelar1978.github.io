@@ -3,22 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gelar Budiman - CV</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+    <title>Gelar Budiman - Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <iframe src="Gelar Budiman CV.pdf"></iframe>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="nav-brand" data-i18n="hero_name">Gelar Budiman</a>
+            <div class="nav-links">
+                <a href="#about" data-i18n="nav_about">Tentang</a>
+                <a href="#expertise" data-i18n="nav_expertise">Keahlian</a>
+                <a href="#portfolio" data-i18n="nav_portfolio">Portofolio</a>
+                <a href="#contact" data-i18n="nav_contact">Kontak</a>
+            </div>
+            <button class="lang-switch" id="langToggle">EN / ID</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 data-i18n="hero_greeting">Halo, Saya</h1>
+            <h1 data-i18n="hero_name">Gelar Budiman, ST., MT</h1>
+            <div class="role" data-i18n="hero_role">Dosen & Peneliti di Telkom University</div>
+            <p data-i18n="hero_desc">Bespecialisasi dalam Pemrosesan Sinyal Klasik dan Kuantum, Watermarking, Compressed Sensing, serta Sistem Multimedia.</p>
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> <span data-i18n="btn_contact">Hubungi Saya</span>
+                </a>
+                <a href="Gelar Budiman CV.pdf" target="_blank" class="btn btn-outline">
+                    <i class="fas fa-file-pdf"></i> <span data-i18n="btn_cv">Lihat CV Lengkap</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_about">Tentang Saya</h2>
+            <div class="grid-2">
+                <div>
+                    <p data-i18n="about_text" style="font-size: 1.1rem; margin-bottom: 2rem;">Saya adalah seorang Dosen dan Peneliti yang berdomisili di Bandung, Indonesia, dengan pengalaman mendalam di bidang Pemrosesan Sinyal, Sistem Komunikasi, dan Watermarking.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="edu_title" style="margin-bottom: 1.5rem;">Pendidikan</h3>
+                    
+                    <div class="edu-item">
+                        <h4 data-i18n="edu_1_degree">Doktoral (S3)</h4>
+                        <div class="uni" data-i18n="edu_1_uni">Institut Teknologi Bandung (ITB)</div>
+                        <span class="year" data-i18n="edu_1_field">Teknik Elektro (STEI)</span>
+                        <span class="year" data-i18n="edu_1_year">2015 - 2021</span>
+                        <p data-i18n="edu_1_thesis">Disertasi: Audio Watermarking</p>
+                    </div>
+
+                    <div class="edu-item">
+                        <h4 data-i18n="edu_2_degree">Magister (S2)</h4>
+                        <div class="uni" data-i18n="edu_2_uni">Institut Teknologi Telkom</div>
+                        <span class="year" data-i18n="edu_2_field">Teknik Telekomunikasi</span>
+                        <span class="year" data-i18n="edu_2_year">2003 - 2005</span>
+                        <p data-i18n="edu_2_thesis">Tesis: Configuring MIMO MC-CDMA on Rayleigh Fading Canal</p>
+                    </div>
+
+                    <div class="edu-item">
+                        <h4 data-i18n="edu_3_degree">Sarjana (S1)</h4>
+                        <div class="uni" data-i18n="edu_3_uni">Institut Teknologi Telkom</div>
+                        <span class="year" data-i18n="edu_3_field">Teknik Telekomunikasi</span>
+                        <span class="year" data-i18n="edu_3_year">1997 - 2002</span>
+                        <p data-i18n="edu_3_thesis">Tugas Akhir: Semi-Adaptive TMS320C5x Equalizer implementation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_expertise">Keahlian & Minat</h2>
+            <div class="grid-3" style="margin-bottom: 3rem;">
+                <div class="card">
+                    <i class="fas fa-wave-square" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3 data-i18n="exp_1">Pemrosesan Sinyal Klasik & Kuantum</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-halved" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3 data-i18n="exp_2">Watermarking & Steganografi</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-compress" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3 data-i18n="exp_3">Compressed Sensing</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-photo-film" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3 data-i18n="exp_4">Sistem Multimedia</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-headphones" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3 data-i18n="exp_5">Pemrosesan Sinyal Audio & Citra</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-mobile-screen" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3 data-i18n="exp_6">Pengembangan Aplikasi Mobile</h3>
+                </div>
+            </div>
+
+            <h3 data-i18n="course_title" style="margin-bottom: 1.5rem; text-align: center;">Mata Kuliah</h3>
+            <div class="tags" style="justify-content: center;">
+                <span class="tag" data-i18n="course_1">Sinyal & Sistem Linier</span>
+                <span class="tag" data-i18n="course_2">Pemrosesan Sinyal Digital</span>
+                <span class="tag" data-i18n="course_3">Sistem Komunikasi</span>
+                <span class="tag" data-i18n="course_4">Computer Vision</span>
+                <span class="tag" data-i18n="course_5">Watermarking & Steganografi</span>
+                <span class="tag" data-i18n="course_6">Koding & Kompresi</span>
+                <span class="tag" data-i18n="course_7">Mikroprosesor & Antarmuka</span>
+                <span class="tag" data-i18n="course_8">Aplikasi Mobile</span>
+                <span class="tag" data-i18n="course_9">Pemrosesan Suara</span>
+                <span class="tag" data-i18n="course_10">AI untuk Komunikasi Nirkabel</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_portfolio">Riset & Publikasi Pilihan</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="pub-item">
+                    <span class="pub-meta" data-i18n="port_1_type">Riset</span>
+                    <div class="pub-title" data-i18n="port_1_title">Penerapan Compressive Sensing Pada Audio Watermarking Untuk Pengamanan Konten Dan Efisiensi Data</div>
+                    <div class="pub-year" data-i18n="port_1_year">2021</div>
+                </div>
+
+                <div class="pub-item">
+                    <span class="pub-meta" data-i18n="port_2_type">Jurnal</span>
+                    <div class="pub-title" data-i18n="port_2_title">A Novel Approach: Effective Compressive Sensing in Power Network Problem</div>
+                    <div class="pub-year" data-i18n="port_2_year">2021 - Journal of Hunan University Natural Sciences</div>
+                </div>
+
+                <div class="pub-item">
+                    <span class="pub-meta" data-i18n="port_3_type">Konferensi</span>
+                    <div class="pub-title" data-i18n="port_3_title">Wavelet-Based Hybrid Audio Watermarking Using Statistical Mean Manipulation and Spread Spectrum</div>
+                    <div class="pub-year" data-i18n="port_3_year">2020 - 27th International Conference on Telecommunications</div>
+                </div>
+
+                <div class="pub-item">
+                    <span class="pub-meta" data-i18n="port_4_type">Riset</span>
+                    <div class="pub-title" data-i18n="port_4_title">Implementasi Audio Watermarking Berbasis DWT Menggunakan SMM Pada Raspberry Pi</div>
+                    <div class="pub-year" data-i18n="port_4_year">2020</div>
+                </div>
+            </div>
+
+            <div class="view-all-container">
+                <a href="Gelar Budiman CV.pdf" target="_blank" class="btn btn-outline" data-i18n="btn_view_all_pubs">Lihat Semua 53 Publikasi & 27 Riset</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HKI Section -->
+    <section id="hki" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_hki">Paten & HKI</h2>
+            <div class="tags" style="justify-content: center; max-width: 800px; margin: 0 auto;">
+                <span class="tag" style="background: white;" data-i18n="hki_1">Aplikasi Stegacitra (2016)</span>
+                <span class="tag" style="background: white;" data-i18n="hki_2">Stegakompresi : 091082 (2017)</span>
+                <span class="tag" style="background: white;" data-i18n="hki_3">CSTV : 000175914 (2019)</span>
+                <span class="tag" style="background: white;" data-i18n="hki_4">Autermarqss : 000202420 (2020)</span>
+                <span class="tag" style="background: white;" data-i18n="hki_5">APK-CM : 000193936 (2020)</span>
+                <span class="tag" style="background: white;" data-i18n="hki_6">LiW-ACS : 000269358 (2021)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container" style="text-align: center; max-width: 600px;">
+            <h2 class="section-title" data-i18n="section_contact">Hubungi Saya</h2>
+            <p data-i18n="contact_desc" style="margin-bottom: 2rem;">Silakan hubungi saya untuk kolaborasi riset, pertanyaan akademis, atau konsultasi profesional.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; text-align: left; background: var(--bg-secondary); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                <div>
+                    <strong style="color: var(--text-main);" data-i18n="contact_label_email">Email</strong><br>
+                    <a href="mailto:gelarbudiman@telkomuniversity.ac.id" data-i18n="contact_email">gelarbudiman@telkomuniversity.ac.id</a>
+                </div>
+                <div>
+                    <strong style="color: var(--text-main);" data-i18n="contact_label_phone">Telepon</strong><br>
+                    <a href="tel:+6281322045924" data-i18n="contact_phone">+6281322045924</a>
+                </div>
+                <div>
+                    <strong style="color: var(--text-main);" data-i18n="contact_label_address">Alamat</strong><br>
+                    <span style="color: var(--text-muted);" data-i18n="contact_address">Jl. Telekomunikasi Terusan Buahbatu Bandung, Indonesia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p data-i18n="footer_text">© 2026 Gelar Budiman. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
